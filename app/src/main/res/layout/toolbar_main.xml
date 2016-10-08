@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout
+    android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:theme="@style/AppTheme.AtyMain"
+    android:fitsSystemWindows="true"
+    android:layout_gravity="top|start"
+    android:layout_margin="0dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="20dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_gravity="top|start"
+        android:layout_margin="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:popupTheme="@style/AppTheme.AtyMain"
+        app:theme="@style/AppTheme.AtyMain"
+        android:elevation="10dp">
+        <!--页面指示器-->
+        <LinearLayout
+            android:id="@+id/line_indicator"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+            <TextView
+                android:id="@+id/indicator_current_assets"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="资产"
+                android:clickable="true"
+                android:background="@drawable/selector_indicator_shape"
+                android:textColor="@drawable/selector_indicator_text"
+                android:textSize="@dimen/text_size_small"/>
+            <TextView
+                android:id="@+id/indicator_income"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="收入"
+                android:clickable="true"
+                android:background="@drawable/selector_indicator_shape"
+                android:textColor="@drawable/selector_indicator_text"
+                android:textSize="@dimen/text_size_small"/>
+            <TextView
+                android:id="@+id/indicator_cost"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="成本"
+                android:clickable="true"
+                android:background="@drawable/selector_indicator_shape"
+                android:textColor="@drawable/selector_indicator_text"
+                android:textSize="@dimen/text_size_small"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+</android.support.design.widget.AppBarLayout>

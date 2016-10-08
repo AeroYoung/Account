@@ -1,0 +1,143 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AtyEntry"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_blue_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/line0"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@color/primary_blue"
+        android:layout_weight="1.0"
+        android:elevation="20dp">
+
+        <RelativeLayout
+            android:id="@+id/relative1"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/view_height_account_list">
+            <ImageButton
+                android:background="@drawable/btn_camera"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:text="收入"
+                android:layout_toLeftOf="@+id/textView"
+                android:clickable="true"
+                android:id="@+id/tv_income"
+                android:textColor="@color/primary_blue_gray"
+                android:textSize="@dimen/text_size_small"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="?android:attr/selectableItemBackgroundBorderless"/>
+            <TextView
+                android:text=" | "
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_large"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:id="@+id/textView" />
+            <TextView
+                android:text="支出"
+                android:layout_toRightOf="@+id/textView"
+                android:clickable="true"
+                android:id="@+id/tv_outlay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="fill_parent"
+                android:background="?android:attr/selectableItemBackgroundBorderless"/>
+        </RelativeLayout>
+
+        <com.aero.account.Chart.MyTextView
+            android:id="@+id/tv_sum"
+            android:text="@string/default_sum"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:gravity="end|center_vertical"
+            android:background="@color/primary_blue"
+            android:layout_marginEnd="30dp"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <RelativeLayout
+            android:id="@+id/relative2"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_blue"
+            android:paddingBottom="10dp">
+
+            <Spinner
+                android:id="@+id/sp_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="35dp"
+                android:text="现金"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/white"
+                android:spinnerMode="dialog">
+
+            </Spinner>
+
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/iv_center"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_pay">
+            </ImageView>
+
+            <Spinner
+                android:id="@+id/sp_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingEnd="35dp"
+                android:layout_alignParentEnd="true"
+                android:text="一日三餐"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/white"
+                android:spinnerMode="dialog">
+
+            </Spinner>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_weight="0.718"
+        android:layout_marginTop="1dp">
+
+        <include layout="@layout/content_calculator"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+

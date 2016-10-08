@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.aero.account.Widget.FragAccountList"
+    android:background="@color/lightgray">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/view_height_account_list"
+        android:background="@color/white"
+        android:id="@+id/add_new_account">
+        <ImageView
+            android:layout_width="@dimen/pic_width_list"
+            android:layout_height="@dimen/pic_width_list"
+            android:background="@drawable/add_account"
+            android:layout_margin="@dimen/pic_margin_list" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/new_account"
+            android:textSize="@dimen/text_size_normal"
+            android:gravity="center_vertical"
+            android:padding="@dimen/text_padding_normal"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:clickable="true"
+        android:id="@+id/line_return"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_height_account_list"
+        android:background="@color/white"
+        android:layout_below="@+id/add_new_account"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp">
+        <ImageView
+            android:layout_width="@dimen/pic_width_list"
+            android:layout_height="@dimen/pic_width_list"
+            android:background="@drawable/show_sub_account"
+            android:layout_margin="@dimen/pic_margin_list" />
+        <TextView
+            android:clickable="true"
+            android:id="@+id/line_return_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="返回"
+            android:textSize="@dimen/text_size_normal"
+            android:gravity="center_vertical"
+            android:padding="@dimen/text_padding_normal"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_return"
+        android:background="@color/white">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>

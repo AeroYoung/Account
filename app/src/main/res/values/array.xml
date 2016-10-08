@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="years">
+        <item>2015</item>
+        <item>2016 </item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+    </string-array>
+    <string-array name="mouth">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+
+    <string-array name="assets">
+        <item>现金</item>
+        <item>银行</item>
+        <item>饭卡</item>
+        <item>支付宝</item>
+    </string-array>
+
+    <string-array name="income">
+        <item>生活费</item>
+        <item>奖学金</item>
+    </string-array>
+
+    <string-array name="outlay">
+        <item>一日三餐</item>
+        <item>娱乐</item>
+        <item>交通</item>
+    </string-array>
+</resources>

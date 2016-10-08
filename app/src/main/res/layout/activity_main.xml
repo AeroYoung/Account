@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <!-- toolbar -->
+    <include layout="@layout/toolbar_main"/>
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+        <!-- 内容界面 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme.AtyMain">
+            <RelativeLayout
+                android:id="@+id/date_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+                <Spinner
+                    android:id="@+id/sp_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/years"
+                    android:clickable="true"
+                    android:layout_alignParentStart="true"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"/>
+                <Spinner
+                    android:id="@+id/sp_mouth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/mouth"
+                    android:clickable="true"
+                    android:layout_toEndOf="@+id/sp_year"
+                    android:layout_toRightOf="@+id/sp_year"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"/>
+                <TextView
+                    android:id="@+id/tv_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="       All         "
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/primary_blue"
+                    android:clickable="true"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"/>
+
+            </RelativeLayout>
+            <com.aero.account.Adapter.WrapContentViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+            </com.aero.account.Adapter.WrapContentViewPager>
+        </LinearLayout>
+        <!-- 侧滑菜单内容 -->
+        <include layout="@layout/navigation_view_main"/>
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add"
+        android:adjustViewBounds="true"
+        app:backgroundTint="@color/primary_blue"
+        app:rippleColor="@color/primary_blue_gray"/>
+
+</android.support.design.widget.CoordinatorLayout>

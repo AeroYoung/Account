@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">iExpenses</string>
+    <string name="money">￥</string>
+    <string name="new_account">新的账户</string>
+    <string name="hello_blank_fragment">版本1.0</string>
+    <string name="title_activity_edit_account">编辑账户</string>
+    <string name="default_sum">￥0</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="btn_ok">OK</string>
+    <string name="title_activity_aty_entry">AtyEntry</string>
+    <string name="title_activity_aty_main">AtyMain</string>
+
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+    <string name="title_activity_aty_axis">AtyAxis</string>
+</resources>
